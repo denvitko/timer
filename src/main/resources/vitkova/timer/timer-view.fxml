@@ -42,7 +42,7 @@
                     <children>
                         <StackPane prefHeight="200.0" prefWidth="410.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <children>
-                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: honeydew;">
+                                <AnchorPane fx:id="countdown" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: honeydew;">
                                     <children>
                                         <GridPane prefHeight="194.0" prefWidth="407.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columnConstraints>
@@ -53,6 +53,37 @@
                                                 <RowConstraints maxHeight="93.69474029541016" minHeight="10.0" prefHeight="54.9578857421875" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                             <children>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                                    <children>
+                                                        <GridPane layoutX="54.0" layoutY="-17.0" prefHeight="73.0" prefWidth="407.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Button alignment="CENTER" mnemonicParsing="false" onAction="#stopTimer" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Stop" GridPane.halignment="CENTER">
+                                                                    <font>
+                                                                        <Font name="October Devanagari Regular" size="13.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button alignment="CENTER" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                                                    <font>
+                                                                        <Font name="October Devanagari Regular" size="13.0" />
+                                                                    </font>
+                                                                </Button>
+                                                                <Button alignment="CENTER" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Reset" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                                                    <font>
+                                                                        <Font name="October Devanagari Regular" size="13.0" />
+                                                                    </font>
+                                                                </Button>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </AnchorPane>
                                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                                     <children>
                                                         <GridPane layoutX="21.0" layoutY="31.0" prefHeight="152.5" prefWidth="407.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -121,42 +152,11 @@
                                                         </GridPane>
                                                     </children>
                                                 </AnchorPane>
-                                                <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                                                    <children>
-                                                        <GridPane layoutX="54.0" layoutY="-17.0" prefHeight="73.0" prefWidth="407.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                            <columnConstraints>
-                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                                            </columnConstraints>
-                                                            <rowConstraints>
-                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                                            </rowConstraints>
-                                                            <children>
-                                                                <Button alignment="CENTER" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Stop" GridPane.halignment="CENTER">
-                                                                    <font>
-                                                                        <Font name="October Devanagari Regular" size="13.0" />
-                                                                    </font>
-                                                                </Button>
-                                                                <Button alignment="CENTER" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER">
-                                                                    <font>
-                                                                        <Font name="October Devanagari Regular" size="13.0" />
-                                                                    </font>
-                                                                </Button>
-                                                                <Button alignment="CENTER" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Reset" GridPane.columnIndex="2" GridPane.halignment="CENTER">
-                                                                    <font>
-                                                                        <Font name="October Devanagari Regular" size="13.0" />
-                                                                    </font>
-                                                                </Button>
-                                                            </children>
-                                                        </GridPane>
-                                                    </children>
-                                                </AnchorPane>
                                             </children>
                                         </GridPane>
                                     </children>
                                 </AnchorPane>
-                                <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: honeydew;">
+                                <AnchorPane fx:id="settings" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: honeydew;">
                                     <children>
                                         <GridPane prefHeight="200.0" prefWidth="410.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <columnConstraints>
@@ -198,7 +198,7 @@
                                                         <ComboBox fx:id="combo_secs" prefWidth="150.0" style="-fx-background-color: seashell; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                                                     </children>
                                                 </GridPane>
-                                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: seashell; -fx-border-color: black; -fx-border-radius: 0px;" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                <Button mnemonicParsing="false" onAction="#startTimer" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: seashell; -fx-border-color: black; -fx-border-radius: 0px;" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font name="October Devanagari Regular" size="13.0" />
                                                     </font>
