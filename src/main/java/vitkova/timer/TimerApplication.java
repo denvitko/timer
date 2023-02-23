@@ -7,6 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * JavaFX Timer App
+ * @author Denise
+ * @version 1.0
+ * @since 2023
+ */
 public class TimerApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
