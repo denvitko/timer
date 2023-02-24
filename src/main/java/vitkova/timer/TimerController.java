@@ -127,14 +127,7 @@ public class TimerController implements Initializable, Runnable {
     public void run() {
         long time = System.currentTimeMillis() + 1000;
         while(running) {
-            synchronized(monitor) {
-                if(isPaused) {
-                    try {
-                        monitor.wait();
-                    } catch (InterruptedException e) {
-                        System.out.println(e.getMessage());
-                    }
-                }
+            //synchronized(monitor) {
                 if (System.currentTimeMillis() >= time) {
                     Platform.runLater(new Runnable() {
                         @Override
@@ -149,7 +142,7 @@ public class TimerController implements Initializable, Runnable {
                     }
                     time = System.currentTimeMillis() + 1000;
                 }
-            }
+            //}
         }
     }
 
@@ -163,12 +156,15 @@ public class TimerController implements Initializable, Runnable {
     }
 
     public void pauseTimer(ActionEvent actionEvent) {
-        if(!isPaused) {
-            isPaused = true;
+        if(isPaused) {
+            t = new Thread(this);
+            t.setDaemon(true);
+            running = true;
+            t.start();
         } else {
-            resumeTimer();
+            running = false;
         }
-
+        isPaused = !isPaused;
     }
 
     public void resetTimer(ActionEvent actionEvent) {
