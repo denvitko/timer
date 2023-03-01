@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vitkova.timer.TimerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vitkova.timer.TimerController">
     <children>
         <GridPane layoutX="146.0" layoutY="63.0" prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columnConstraints>
@@ -65,17 +65,17 @@
                                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                             </rowConstraints>
                                                             <children>
-                                                                <Button fx:id="btn_stop" alignment="CENTER" mnemonicParsing="false" onAction="#stopTimer" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Stop" GridPane.halignment="CENTER">
+                                                                <Button fx:id="btn_stop" alignment="CENTER" mnemonicParsing="false" onAction="#stopTimer" prefWidth="75.0" style="-fx-border-color: black;" text="Stop" GridPane.halignment="CENTER">
                                                    <font>
                                                       <Font name="Antarctican Mono Bold" size="13.0" />
                                                    </font>
                                                                 </Button>
-                                                                <Button fx:id="btn_pause" alignment="CENTER" mnemonicParsing="false" onAction="#pauseTimer" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                                                                <Button fx:id="btn_pause" alignment="CENTER" mnemonicParsing="false" onAction="#pauseTimer" prefWidth="75.0" style="-fx-border-color: black;" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                                                                     <font>
                                                                         <Font name="Antarctican Mono Bold" size="13.0" />
                                                                     </font>
                                                                 </Button>
-                                                                <Button fx:id="btn_reset" alignment="CENTER" mnemonicParsing="false" onAction="#resetTimer" prefWidth="75.0" style="-fx-background-color: seashell; -fx-border-color: black;" text="Reset" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                                                <Button fx:id="btn_reset" alignment="CENTER" mnemonicParsing="false" onAction="#resetTimer" prefWidth="75.0" style="-fx-border-color: black;" text="Reset" GridPane.columnIndex="2" GridPane.halignment="CENTER">
                                                                     <font>
                                                                         <Font name="Antarctican Mono Bold" size="13.0" />
                                                                     </font>
@@ -198,7 +198,7 @@
                                                         <ComboBox fx:id="combo_secs" prefWidth="150.0" style="-fx-background-color: lightyellow lightyellow; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                                                     </children>
                                                 </GridPane>
-                                                <Button mnemonicParsing="false" onAction="#startTimer" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: seashell; -fx-border-color: black; -fx-border-radius: 0px;" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                                <Button mnemonicParsing="false" onAction="#startTimer" prefHeight="26.0" prefWidth="147.0" style="-fx-border-color: black;" text="Start" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                                                     <font>
                                                         <Font name="Antarctican Mono Bold" size="13.0" />
                                                     </font>

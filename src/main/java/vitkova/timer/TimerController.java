@@ -15,6 +15,8 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
 
 public class TimerController implements Initializable, Runnable {
 
@@ -47,6 +49,8 @@ public class TimerController implements Initializable, Runnable {
     private int seconds;
     private boolean isPaused = false;
     Object monitor = new Object();
+
+    MediaPlayer mp;
 
     /**
      * @param url
@@ -136,6 +140,9 @@ public class TimerController implements Initializable, Runnable {
                     });
                     if (seconds <= 0) {
                         running = false;
+                        Media bell = new Media(getClass().getResource("bell.wav").toString());
+                        mp = new MediaPlayer(bell);
+                        mp.play();
                     } else {
                         seconds--;
                     }
